@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeFileDialogSharp", "NativeFileDialogSharp\NativeFileDialogSharp.csproj", "{4127F279-9FD5-4C37-B904-242C124C1A07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeFileDialogSharpSandbox", "NativeFileDialogSharpSandbox\NativeFileDialogSharpSandbox.csproj", "{427E5F76-8418-4EA3-9AA3-C1DBFDE0478F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4127F279-9FD5-4C37-B904-242C124C1A07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4127F279-9FD5-4C37-B904-242C124C1A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4127F279-9FD5-4C37-B904-242C124C1A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4127F279-9FD5-4C37-B904-242C124C1A07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{427E5F76-8418-4EA3-9AA3-C1DBFDE0478F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{427E5F76-8418-4EA3-9AA3-C1DBFDE0478F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{427E5F76-8418-4EA3-9AA3-C1DBFDE0478F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{427E5F76-8418-4EA3-9AA3-C1DBFDE0478F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
