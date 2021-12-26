@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using NativeFileDialogSharp.Native;
 
-namespace NativeFileDialogSharp.Native;
+namespace NativeFileDialogSharp;
 
 public static class Dialog
 {
