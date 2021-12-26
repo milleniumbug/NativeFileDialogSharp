@@ -2,35 +2,14 @@
 
     <PropertyGroup>
         <LangVersion>10</LangVersion>
-        <PackageVersion>0.2</PackageVersion>
+        <PackageVersion>0.2.1</PackageVersion>
         <TargetFramework>net6.0</TargetFramework>
         <Nullable>disable</Nullable>
-    </PropertyGroup>
-
-    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    </PropertyGroup>
-
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
 
     <ItemGroup>
-      <None Update="libnfd.so">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="nfd.dll">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="nfd.pdb">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="nfd.exp">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="nfd.lib">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
+        <Content Include="runtimes\**" PackagePath="runtimes" Visible="false" />
     </ItemGroup>
 
 </Project>
