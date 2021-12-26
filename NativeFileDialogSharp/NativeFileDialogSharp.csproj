@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <LangVersion>10</LangVersion>
-        <PackageVersion>0.1</PackageVersion>
+        <PackageVersion>0.2</PackageVersion>
         <TargetFramework>net6.0</TargetFramework>
         <Nullable>disable</Nullable>
     </PropertyGroup>
@@ -23,6 +23,12 @@
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
       <None Update="nfd.pdb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="nfd.exp">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="nfd.lib">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
     </ItemGroup>
