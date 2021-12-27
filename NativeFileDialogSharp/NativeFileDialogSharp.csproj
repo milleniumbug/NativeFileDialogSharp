@@ -6,6 +6,10 @@
         <TargetFramework>net6.0</TargetFramework>
         <Nullable>disable</Nullable>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <PackageLicenseExpression>Zlib</PackageLicenseExpression>
+        <Authors>milleniumbug</Authors>
+        <PackageProjectUrl>https://github.com/milleniumbug/NativeFileDialogSharp</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/milleniumbug/NativeFileDialogSharp</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>

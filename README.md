@@ -4,8 +4,7 @@ C# library bindings for [nativefiledialog](https://github.com/mlabbe/nativefiled
 
 The library currently implements
 
-- Windows 32-bit
-- Windows 64-bit
-- Linux 64-bit
-
-I have no means of building the library for macOS, contributions welcome.
+- Windows x86
+- Windows x86-64
+- Linux x86-64
+- macOS x86-64
