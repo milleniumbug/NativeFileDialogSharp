@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <LangVersion>10</LangVersion>
-        <PackageVersion>0.2.4</PackageVersion>
+        <PackageVersion>0.2.5</PackageVersion>
         <TargetFramework>net6.0</TargetFramework>
         <Nullable>disable</Nullable>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -10,6 +10,7 @@
         <Authors>milleniumbug</Authors>
         <PackageProjectUrl>https://github.com/milleniumbug/NativeFileDialogSharp</PackageProjectUrl>
         <RepositoryUrl>https://github.com/milleniumbug/NativeFileDialogSharp</RepositoryUrl>
+        <Description>Cross-platform native file dialog controls for Windows, Linux and macOS</Description>
     </PropertyGroup>
 
     <ItemGroup>
