@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 using System.Text;
 using NativeFileDialogSharp.Native;
 
@@ -9,6 +10,32 @@ namespace NativeFileDialogSharp
     public static class Dialog
     {
         private static readonly Encoder utf8encoder = Encoding.UTF8.GetEncoder();
+
+        private static readonly bool need32bit = Is32BitWindowsOnNetFramework();
+        
+        private static bool Is32BitWindowsOnNetFramework()
+        {
+            try
+            {
+                // we call a function that does nothing just to test if we can load it properly
+                NativeFileDialogSharp.Native.NativeFunctions.NFD_Dummy();
+                return false;
+            }
+            catch
+            {
+                // a call to a default library failed, let's attempt the other one
+                try
+                {
+                    NativeFileDialogSharp.Native.NativeFunctions32.NFD_Dummy();
+                    return true;
+                }
+                catch
+                {
+                    // both of them failed so we may as well default to the default one for predictability
+                    return false;
+                }
+            }
+        }
 
         private static unsafe byte[] ToUtf8(string s)
         {
@@ -50,7 +77,10 @@ namespace NativeFileDialogSharp
             {
                 string path = null;
                 string errorMessage = null;
-                var result = NativeFunctions.NFD_OpenDialog(filterListNts, defaultPathNts, out IntPtr outPathIntPtr);
+                IntPtr outPathIntPtr;
+                var result = need32bit 
+                    ? NativeFunctions32.NFD_OpenDialog(filterListNts, defaultPathNts, out outPathIntPtr)
+                    : NativeFunctions.NFD_OpenDialog(filterListNts, defaultPathNts, out outPathIntPtr);
                 if (result == nfdresult_t.NFD_ERROR)
                 {
                     errorMessage = FromUtf8(NativeFunctions.NFD_GetError());
@@ -73,7 +103,10 @@ namespace NativeFileDialogSharp
             {
                 string path = null;
                 string errorMessage = null;
-                var result = NativeFunctions.NFD_SaveDialog(filterListNts, defaultPathNts, out IntPtr outPathIntPtr);
+                IntPtr outPathIntPtr;
+                var result = need32bit 
+                    ? NativeFunctions32.NFD_SaveDialog(filterListNts, defaultPathNts, out outPathIntPtr) 
+                    : NativeFunctions.NFD_SaveDialog(filterListNts, defaultPathNts, out outPathIntPtr);
                 if (result == nfdresult_t.NFD_ERROR)
                 {
                     errorMessage = FromUtf8(NativeFunctions.NFD_GetError());
@@ -95,7 +128,10 @@ namespace NativeFileDialogSharp
             {
                 string path = null;
                 string errorMessage = null;
-                var result = NativeFunctions.NFD_PickFolder(defaultPathNts, out IntPtr outPathIntPtr);
+                IntPtr outPathIntPtr;
+                var result = need32bit
+                    ? NativeFunctions32.NFD_PickFolder(defaultPathNts, out outPathIntPtr)
+                    : NativeFunctions.NFD_PickFolder(defaultPathNts, out outPathIntPtr);
                 if (result == nfdresult_t.NFD_ERROR)
                 {
                     errorMessage = FromUtf8(NativeFunctions.NFD_GetError());
@@ -119,7 +155,9 @@ namespace NativeFileDialogSharp
                 List<string> paths = null;
                 string errorMessage = null;
                 nfdpathset_t pathSet;
-                var result = NativeFunctions.NFD_OpenDialogMultiple(filterListNts, defaultPathNts, &pathSet);
+                var result = need32bit
+                    ? NativeFunctions32.NFD_OpenDialogMultiple(filterListNts, defaultPathNts, &pathSet)
+                    : NativeFunctions.NFD_OpenDialogMultiple(filterListNts, defaultPathNts, &pathSet);
                 if (result == nfdresult_t.NFD_ERROR)
                 {
                     errorMessage = FromUtf8(NativeFunctions.NFD_GetError());

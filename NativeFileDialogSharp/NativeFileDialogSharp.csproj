@@ -15,6 +15,12 @@
 
     <ItemGroup>
         <Content Include="runtimes\**" PackagePath="runtimes" Visible="false" />
+        <Content Include="nfd.dll">
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Include="nfd_x86.dll">
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
     </ItemGroup>
 
 </Project>
