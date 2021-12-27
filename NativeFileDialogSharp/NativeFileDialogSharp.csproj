@@ -1,9 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <LangVersion>10</LangVersion>
-        <PackageVersion>0.2.5</PackageVersion>
-        <TargetFramework>net6.0</TargetFramework>
+        <LangVersion>7.3</LangVersion>
+        <PackageVersion>0.5.0</PackageVersion>
         <Nullable>disable</Nullable>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <PackageLicenseExpression>Zlib</PackageLicenseExpression>
@@ -11,6 +10,7 @@
         <PackageProjectUrl>https://github.com/milleniumbug/NativeFileDialogSharp</PackageProjectUrl>
         <RepositoryUrl>https://github.com/milleniumbug/NativeFileDialogSharp</RepositoryUrl>
         <Description>Cross-platform native file dialog controls for Windows, Linux and macOS</Description>
+        <TargetFramework>netstandard2.0</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>

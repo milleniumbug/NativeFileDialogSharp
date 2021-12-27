@@ -1,22 +1,51 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeFileDialogSharp", "NativeFileDialogSharp\NativeFileDialogSharp.csproj", "{4127F279-9FD5-4C37-B904-242C124C1A07}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NativeFileDialogSharp", "NativeFileDialogSharp\NativeFileDialogSharp.csproj", "{4127F279-9FD5-4C37-B904-242C124C1A07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeFileDialogSharpSandbox", "NativeFileDialogSharpSandbox\NativeFileDialogSharpSandbox.csproj", "{427E5F76-8418-4EA3-9AA3-C1DBFDE0478F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NativeFileDialogSharpSandbox", "NativeFileDialogSharpSandbox\NativeFileDialogSharpSandbox.csproj", "{427E5F76-8418-4EA3-9AA3-C1DBFDE0478F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeFileDialogSharpSandboxNetFramework", "NativeFileDialogSharpSandboxNetFramework\NativeFileDialogSharpSandboxNetFramework.csproj", "{0FD91168-D8F5-4776-8D91-CB9B9C55AA1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{4127F279-9FD5-4C37-B904-242C124C1A07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4127F279-9FD5-4C37-B904-242C124C1A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4127F279-9FD5-4C37-B904-242C124C1A07}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4127F279-9FD5-4C37-B904-242C124C1A07}.Debug|x64.Build.0 = Debug|Any CPU
 		{4127F279-9FD5-4C37-B904-242C124C1A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4127F279-9FD5-4C37-B904-242C124C1A07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4127F279-9FD5-4C37-B904-242C124C1A07}.Release|x64.ActiveCfg = Release|Any CPU
+		{4127F279-9FD5-4C37-B904-242C124C1A07}.Release|x64.Build.0 = Release|Any CPU
 		{427E5F76-8418-4EA3-9AA3-C1DBFDE0478F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{427E5F76-8418-4EA3-9AA3-C1DBFDE0478F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{427E5F76-8418-4EA3-9AA3-C1DBFDE0478F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{427E5F76-8418-4EA3-9AA3-C1DBFDE0478F}.Debug|x64.Build.0 = Debug|Any CPU
 		{427E5F76-8418-4EA3-9AA3-C1DBFDE0478F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{427E5F76-8418-4EA3-9AA3-C1DBFDE0478F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{427E5F76-8418-4EA3-9AA3-C1DBFDE0478F}.Release|x64.ActiveCfg = Release|Any CPU
+		{427E5F76-8418-4EA3-9AA3-C1DBFDE0478F}.Release|x64.Build.0 = Release|Any CPU
+		{0FD91168-D8F5-4776-8D91-CB9B9C55AA1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FD91168-D8F5-4776-8D91-CB9B9C55AA1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FD91168-D8F5-4776-8D91-CB9B9C55AA1B}.Debug|x64.ActiveCfg = Debug|x64
+		{0FD91168-D8F5-4776-8D91-CB9B9C55AA1B}.Debug|x64.Build.0 = Debug|x64
+		{0FD91168-D8F5-4776-8D91-CB9B9C55AA1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FD91168-D8F5-4776-8D91-CB9B9C55AA1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FD91168-D8F5-4776-8D91-CB9B9C55AA1B}.Release|x64.ActiveCfg = Release|x64
+		{0FD91168-D8F5-4776-8D91-CB9B9C55AA1B}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {124CB415-A372-4268-9C13-330A0F1093C2}
 	EndGlobalSection
 EndGlobal

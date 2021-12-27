@@ -1,7 +1,7 @@
 ﻿using NativeFileDialogSharp;
 using System;
 
-namespace NativeFileDialogSharpSandbox
+namespace NativeFileDialogSharpSandboxNetFramework
 {
     internal class Program
     {
